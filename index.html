@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title> Social Media Usage in the U.S. </title>
+  <link rel="stylesheet" href="styles/normalize.css">
+  <link rel="stylesheet" href="styles/assignment.css">
+  <link href="https://fonts.googleapis.com/css?family=Montserrat|Roboto:300" rel="stylesheet">
+  <script src="https://code.highcharts.com/highcharts.js"></script>
+  <script src="https://code.highcharts.com/themes/grid-light.js"></script>
+  <script src="https://code.highcharts.com/modules/exporting.js"></script>
+</head>
+
+<header>
+  <h1> U.S. SOCIAL MEDIA USAGE </h1>
+  <p id="byline">Tho Tran</p>
+</header>
+
+<body>
+  <article>
+    <h2> SOCIAL MEDIA IN THE DIGITAL ERA </h2>
+    <hr>
+    <p> With the digital era upon us, many people have devices that can connect to the internet. Social media, a relatively new concept, is widespread amongst online users. Over half of all Americans use some type of social media! Below is a breakdown of usage by platform.</p>
+  <div id="container" style="width:100%; height:400px;">
+    <script>
+    Highcharts.chart('container', {
+        chart: {
+            type: 'bar'
+        },
+        title: {
+            text: 'Social Media Usage by Platform'
+        },
+        subtitle: {
+            text: 'Source: <a href="http://www.pewinternet.org/fact-sheet/social-media/">pewinternet.org</a>'
+        },
+        xAxis: {
+            categories: ['Facebook', 'Instagram', 'Twitter', 'LinkedIn', 'Pinterest'],
+            title: {
+                text: null
+            }
+        },
+        yAxis: {
+            min: 0,
+            title: {
+                text: '% who use each social media platform',
+                align: 'high'
+            },
+            labels: {
+                overflow: 'justify'
+            }
+        },
+
+        plotOptions: {
+            bar: {
+                dataLabels: {
+                    enabled: true
+                }
+            }
+        },
+        legend: {
+            layout: 'horizontal',
+            align: 'center',
+            verticalAlign: 'bottom',
+            floating: false,
+            borderWidth: 1,
+            backgroundColor: ((Highcharts.theme && Highcharts.theme.legendBackgroundColor) || '#FFFFFF'),
+            shadow: false
+        },
+        credits: {
+            enabled: true
+        },
+        series: [{
+            name: '% of Total Adults',
+            data: [68, 28, 26, 25, 21]
+        }, {
+            name: '% of Males',
+            data: [67, 23, 15, 28, 21]
+        }, {
+            name: '% of Females',
+            data: [69, 32, 38, 23, 21]
+        }]
+    });
+    </script>
+  </div>
+  <p class="sources">Source: Pew Research Center, <a href="http://www.pewinternet.org/fact-sheet/social-media/"> Social Media Facts Sheet </a> </p>
+  <p> Facebook is the most used platform by a long shot. Many Americans who use social media do so daily with Facebook being the most frequently used. </p>
+  <div id="container2" style="width:100%; height:400px;">
+    <script>
+    Highcharts.chart('container2', {
+        chart: {
+            type: 'bar'
+        },
+        title: {
+            text: 'Social Media Usage Frequency by Platform'
+        },
+        xAxis: {
+            categories: ['Facebook', 'Instagram', 'Twitter', 'LinkedIn', 'Pinterest']
+        },
+        yAxis: {
+            min: 0,
+            max: 100,
+            title: {
+                text: '% of users'
+            }
+        },
+        legend: {
+            reversed: true
+        },
+        plotOptions: {
+            series: {
+                stacking: 'normal'
+            }
+        },
+        series: [{
+            name: 'Less often',
+            data: [7, 22, 33, 51, 43]
+        }, {
+            name: 'Weekly',
+            data: [15, 26, 24, 31, 31]
+        }, {
+            name: 'Daily',
+            data: [76, 51, 42, 18, 25]
+        }]
+    });
+    </script>
+  </div>
+  <p class="sources">Source: Pew Research Center, <a href="http://www.pewinternet.org/fact-sheet/social-media/"> Social Media Facts Sheet </a> </p>
+  </article>
+  <p> You can find more information about social media usage <a href="http://www.pewinternet.org/fact-sheet/social-media/">here</a>.</p>
+</body>
+</html>
