@@ -51,8 +51,9 @@ header {
   outline: 1px solid grey;
 }
 
-body p{
+footer{
   text-align: center;
+  margin: 1em auto;
 }
 
 article {
